@@ -1,0 +1,108 @@
+object FormCadTipo: TFormCadTipo
+  Left = 330
+  Height = 331
+  Top = 250
+  Width = 562
+  Caption = 'Cadastro de Tipos de Contas a Pagar/Receber'
+  ClientHeight = 331
+  ClientWidth = 562
+  DesignTimePPI = 120
+  Position = poMainFormCenter
+  object lblCodigo: TLabel
+    Left = 48
+    Height = 20
+    Top = 34
+    Width = 49
+    Caption = 'Código'
+    FocusControl = DBECodigo
+  end
+  object lblDescicao: TLabel
+    Left = 48
+    Height = 20
+    Top = 88
+    Width = 65
+    Caption = 'Descrição'
+    FocusControl = DBEDescricao
+  end
+  object lblTipo: TLabel
+    Left = 48
+    Height = 20
+    Top = 201
+    Width = 30
+    Caption = 'Tipo'
+  end
+  object lblGrupo: TLabel
+    Left = 48
+    Height = 20
+    Top = 144
+    Width = 41
+    Caption = 'Grupo'
+  end
+  object DBECodigo: TDBEdit
+    Left = 48
+    Height = 28
+    Top = 56
+    Width = 89
+    DataField = 'codigo'
+    DataSource = FormConTipo.dsTipo
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object DBEDescricao: TDBEdit
+    Left = 48
+    Height = 28
+    Top = 109
+    Width = 465
+    DataField = 'descricao'
+    DataSource = FormConTipo.dsTipo
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object DBCTipo: TDBComboBox
+    Left = 48
+    Height = 28
+    Top = 217
+    Width = 225
+    DataField = 'tipo'
+    DataSource = FormConTipo.dsTipo
+    ItemHeight = 20
+    Items.Strings = (
+      'Receita'
+      'Despesa'
+    )
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object DBLGrupo: TDBLookupComboBox
+    Left = 48
+    Height = 28
+    Top = 165
+    Width = 225
+    DataField = 'grupo'
+    DataSource = FormConTipo.dsTipo
+    KeyField = 'codigo'
+    ListField = 'descricao'
+    ListFieldIndex = 0
+    ListSource = FormConTipo.dsGrupo
+    LookupCache = False
+    TabOrder = 3
+  end
+  object btnGravar: TButton
+    Left = 336
+    Height = 25
+    Top = 264
+    Width = 75
+    Caption = 'Gravar'
+    TabOrder = 4
+    OnClick = btnGravarClick
+  end
+  object btnCancelar: TButton
+    Left = 438
+    Height = 25
+    Top = 264
+    Width = 75
+    Caption = 'Cancelar'
+    TabOrder = 5
+    OnClick = btnCancelarClick
+  end
+end

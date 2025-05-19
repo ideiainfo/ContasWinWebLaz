@@ -1,0 +1,25 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 419
+  HorizontalOffset = 413
+  VerticalOffset = 313
+  Width = 713
+  PPI = 120
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'RawStringEncoding=DB_CP'
+    )
+    Connected = True
+    DisableSavepoints = False
+    HostName = '127.0.0.1'
+    Port = 3306
+    Database = 'cpagrec'
+    User = 'root'
+    Password = 'produtiv'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\projetosd2\dll\libmysql.dll'
+    Left = 460
+    Top = 150
+  end
+end

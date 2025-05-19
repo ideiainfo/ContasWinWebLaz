@@ -1,0 +1,44 @@
+object FormPrincipal: TFormPrincipal
+  Left = 567
+  Height = 506
+  Top = 151
+  Width = 980
+  Caption = 'ContasWin - Controle de Contas a Pagar e Receber'
+  ClientHeight = 506
+  ClientWidth = 980
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  Position = poMainFormCenter
+  object Label1: TLabel
+    Left = 8
+    Height = 37
+    Top = 8
+    Width = 436
+    Caption = 'Dashboard Contas a Pagar e Receber'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlue
+    Font.Height = -27
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+  end
+  object MainMenu1: TMainMenu
+    Left = 480
+    Top = 40
+    object MenuItem3: TMenuItem
+      Caption = 'Home'
+      OnClick = MenuItem3Click
+    end
+    object AppModule21: TMenuItem
+      Caption = 'Cadastros'
+      object MenuItem1: TMenuItem
+        Caption = 'Tipos de Contas'
+        OnClick = MenuItem1Click
+      end
+      object MenuItem2: TMenuItem
+        Caption = 'Grupo de Contas'
+        OnClick = MenuItem2Click
+      end
+    end
+  end
+end

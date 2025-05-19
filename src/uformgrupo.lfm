@@ -1,0 +1,130 @@
+inherited FormGrupo: TFormGrupo
+  OnShow = FormShow
+  inherited Crud_PageControl: TPageControl
+    inherited Crud_TabSheetSearch: TTabSheet
+      inherited Crud_ButtonSearch: TButton
+        OnClick = Crud_ButtonSearchClick
+      end
+      inherited Crud_DBGrid_Search: TDBGrid
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'codigo'
+            FieldName = 'codigo'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'descricao'
+            Width = 400
+            FieldName = 'descricao'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'tipo'
+            FieldName = 'tipo'
+          end>
+      end
+    end
+    inherited Crud_TabSheetData: TTabSheet
+      object Label1: TLabel[3]
+        Left = 24
+        Height = 17
+        Top = 40
+        Width = 43
+        Caption = 'Código'
+      end
+      object Label2: TLabel[4]
+        Left = 24
+        Height = 17
+        Top = 88
+        Width = 59
+        Caption = 'Descrição'
+      end
+      object Label3: TLabel[5]
+        Left = 24
+        Height = 17
+        Top = 136
+        Width = 26
+        Caption = 'Tipo'
+      end
+      object DBEdit1: TDBEdit[6]
+        Left = 104
+        Height = 25
+        Top = 40
+        Width = 100
+        DataField = 'codigo'
+        DataSource = Crud_DSQuery
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object DBEdit2: TDBEdit[7]
+        Left = 104
+        Height = 25
+        Top = 88
+        Width = 276
+        DataField = 'descricao'
+        DataSource = Crud_DSQuery
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object DBComboBox1: TDBComboBox[8]
+        Left = 106
+        Height = 25
+        Top = 135
+        Width = 125
+        DataField = 'tipo'
+        DataSource = Crud_DSQuery
+        ItemHeight = 17
+        Items.Strings = (
+          'Receita'
+          'Despesa'
+        )
+        MaxLength = 0
+        TabOrder = 5
+      end
+    end
+  end
+  inherited Crud_Query: TZQuery
+    SQL.Strings = (
+      'select * from grupoconta'
+    )
+    object Crud_Queryid: TLongintField[0]
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object Crud_Querycodigo: TLongintField[1]
+      FieldKind = fkData
+      FieldName = 'codigo'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object Crud_Querydescricao: TStringField[2]
+      FieldKind = fkData
+      FieldName = 'descricao'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 100
+    end
+    object Crud_Querytipo: TStringField[3]
+      FieldKind = fkData
+      FieldName = 'tipo'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+  end
+end

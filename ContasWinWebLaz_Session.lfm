@@ -1,0 +1,6 @@
+inherited ContasWinWebLazSession: TContasWinWebLazSession
+  Height = 606
+  HorizontalOffset = 1021
+  VerticalOffset = 423
+  Width = 697
+end
