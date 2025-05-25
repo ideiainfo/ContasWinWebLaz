@@ -168,14 +168,14 @@
         <UnitName Value="Unit1"/>
       </Unit>
       <Unit>
-        <Filename Value="C:/d2bridgeframework/D2Bridge Framework/D2Bridge.ServerControllerBase.pas"/>
+        <Filename Value="../d2bridgeframework/D2Bridge Framework/D2Bridge.ServerControllerBase.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="D2BridgeServerControllerBase"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
       </Unit>
       <Unit>
-        <Filename Value="C:/d2bridgeframework/D2Bridge Framework/Prism/Prism.SessionBase.pas"/>
+        <Filename Value="../d2bridgeframework/D2Bridge Framework/Prism/Prism.SessionBase.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="PrismSessionBase"/>
         <HasResources Value="True"/>

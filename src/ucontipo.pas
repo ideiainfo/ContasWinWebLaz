@@ -81,9 +81,14 @@ begin
   Title:= 'Contas Web Laz';
   SubTitle:= 'Cadastro de Tipos de Contas a Pagar e Receber';
 
-  TemplateClassForm:= TD2BridgeFormTemplate;
-  D2Bridge.FrameworkExportType.TemplateMasterHTMLFile:= '';
-  D2Bridge.FrameworkExportType.TemplatePageHTMLFile := '';
+//  TemplateClassForm:= TD2BridgeFormTemplate;
+  D2Bridge.FrameworkExportType.TemplateMasterHTMLFile:= 'template.html';
+  D2Bridge.FrameworkExportType.TemplatePageHTMLFile := 'itemtemplate.html';
+
+  if FormCadTipo = nil then
+    TFormCadTipo.CreateInstance;
+
+  D2Bridge.AddNested(FormCadTipo);
 
   //Export yours Controls
   with D2Bridge.Items.add do
@@ -100,13 +105,14 @@ begin
             AddVCLObj(BtnNovo, CSSClass.Button.add);
      end;
 
-     with row.Items.Add do
+     with row('mt-3').Items.Add do
         VCLObj(DBGrid1);
 
      with row.Items.Add do
         with FormGroup do
           AddVCLObj(btnFechar,CSSClass.Button.close);
 
+     Popup('Popup'+FormCadTipo.Name, 'Tipo de Receita e Despesa',True, CSSClass.Popup.Large).Items.Add.Nested(formCadTipo.Name);
   end;
 end;
 
@@ -214,12 +220,11 @@ end;
 
 procedure TFormConTipo.BtnNovoClick(Sender: TObject);
 begin
-  if FormCadTipo = nil then
-    TFormCadTipo.CreateInstance;
-
   qrTipo.insert;
-  FormCadTipo.show;
-
+  if IsD2BridgeContext then
+     ShowPopup('Popup'+formCadTipo.name)
+   else
+     FormCadTipo.showmodal;
 
 
 end;
@@ -246,10 +251,14 @@ end;
 
 procedure TFormConTipo.editarregistro;
 begin
-  if FormCadTipo = nil then
-    TFormCadTipo.CreateInstance;
   dsTipo.DataSet.edit;
-  FormCadTipo.show;
+
+  if IsD2BridgeContext then
+    ShowPopup('Popup'+formCadTipo.name)
+  else
+    FormCadTipo.showmodal;
+
+
 end;
 
 procedure TFormConTipo.FormCreate(Sender: TObject);

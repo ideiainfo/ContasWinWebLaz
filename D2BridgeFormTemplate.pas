@@ -7,15 +7,22 @@ unit D2BridgeFormTemplate;
 interface
 
 Uses
- Classes,
+ Classes, SysUtils,
  D2Bridge.Prism.Form, uFormPrincipal;
 
 
 type
+
+ { TD2BridgeFormTemplate }
+
  TD2BridgeFormTemplate = class(TD2BridgePrismForm)
   private
    procedure ProcessHTML(Sender: TObject; var AHTMLText: string);
    procedure ProcessTagHTML(const TagString: string; var ReplaceTag: string);
+   procedure CallBack(const CallBackName:string; EventParams: TStrings); override;
+
+   //function OpenMenuPrincipal(EventParams: TStrings): String;
+   //function OpenMenuConTipo(EventParams: TStrings): String;
    //function OpenMenuItem(EventParams: TStrings): String;
   public
    constructor Create(AOwner: TComponent; D2BridgePrismFramework: TObject); override;
@@ -26,7 +33,7 @@ type
 implementation
 
 Uses
- ContasWinWebLazWebApp;
+ ContasWinWebLazWebApp,ucontipo;
 
 
 { TD2BridgeFormTemplate }
@@ -40,8 +47,11 @@ begin
  OnProcessHTML:= ProcessHTML;
  OnTagHTML:= ProcessTagHTML;
 
- with D2Bridge.Items.add do
-   SideMenu(Formprincipal.MainMenu1);
+ //CallBacks.Register('MenuPrincipal', OpenMenuPrincipal);
+ //CallBacks.Register('MenuConTipo', OpenMenuConTipo);
+
+ //with D2Bridge.Items.add do
+ //   SideMenu(Formprincipal.MainMenu1);
 
  //Yours CallBacks Ex:
  //Session.CallBacks.Register('OpenMenuItem', OpenMenuItem);
@@ -58,6 +68,41 @@ begin
    end);
   }
 end;
+
+
+procedure TD2BridgeFormTemplate.CallBack(const CallBackName: string;   EventParams: TStrings);
+begin
+  inherited;
+ if SameText(CallBackName, 'MenuConTipo') then
+ begin
+  if FormConTipo = nil then
+     TFormConTipo.CreateInstance;
+  FormConTipo.Show;
+ end;
+
+  if SameText(CallBackName, 'MenuPrincipal') then
+ begin
+   if FormPrincipal = nil then
+     TFormPrincipal.CreateInstance;
+   FormPrincipal.Show;
+ end;
+
+
+end;
+
+//function TD2BridgeFormTemplate.OpenMenuPrincipal(EventParams: TStrings): String;
+//begin
+//   if FormPrincipal = nil then
+//     TFormPrincipal.CreateInstance;
+//  FormPrincipal.Show;
+//end;
+//
+//function TD2BridgeFormTemplate.OpenMenuConTipo(EventParams: TStrings): String;
+//begin
+//    if FormConTipo = nil then
+//       TFormConTipo.CreateInstance;
+//    FormConTipo.Show;
+//end;
 
 procedure TD2BridgeFormTemplate.ProcessHTML(Sender: TObject;
   var AHTMLText: string);

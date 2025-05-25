@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body class="dark-mode">
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar p-3 bg-light" id="sidebar">
+            <h3 class="text-center mb-4">Dashboard</h3>
+            <div class="list-group">
+                <a onclick="" class="list-group-item list-group-item-action active">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+                <a href="#tablesSubmenu" data-bs-toggle="collapse" class="list-group-item list-group-item-action">
+                    <i class="bi bi-table"></i> Tables
+                    <i class="bi bi-chevron-down float-end"></i>
+                </a>
+                <div class="collapse" id="tablesSubmenu">
+                    <a href="tables-simple.html" class="list-group-item list-group-item-action ps-5">
+                        <i class="bi bi-list"></i> Simple Table
+                    </a>
+                    <a href="tables-datatable.html" class="list-group-item list-group-item-action ps-5">
+                        <i class="bi bi-grid"></i> DataTable
+                    </a>
+                </div>
+                <a href="forms.html" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-text"></i> Forms
+                </a>
+                <a   onclick="{{CallBack=MenuConTipo}}" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-text"></i> Tipos de Contas
+                </a>
+            </div>
+            <div class="mt-auto pt-3">
+                <a href="login.html" class="btn btn-danger w-100 mt-2">Logout</a>
+            </div>
+        </div>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <button id="sidebarToggle" class="btn btn-link text-light">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+                    <a class="navbar-brand" href="#">Sistema de Contas a Pagar e Receber</a>
+                    <div class="ms-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-light dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-circle"></i> Admin
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> Profile</a></li>
+                                <li><button class="dropdown-item" id="themeToggle">
+                                    <i class="bi bi-circle-half"></i> Toggle Theme
+                                </button></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <div class="container-fluid p-4">
+
+                $prismpage
+
+
+
+            </div>
+<!-- End Manin Content -->            
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<!-- Update the footer -->
+<footer class="footer py-3 mt-auto" style="background-color: #212529;">
+    <div class="container text-center text-light">
+        <span>&copy; 2025 Copyright IdeiaInfo. All rights reserved.</span>
+    </div>
+</footer>
+
+<!-- Update these styles -->
+<style>
+    .navbar {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .footer {
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+    }
+    .dropdown-menu {
+        background-color: #212529;
+    }
+    .dropdown-item {
+        color: #fff;
+    }
+    .dropdown-item:hover {
+        background-color: #343a40;
+        color: #fff;
+    }
+</style>
+
+<!-- Add this script before closing body tag -->
+<script>
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        document.body.classList.toggle('light-mode');
+        const isDark = !document.body.classList.contains('light-mode');
+        
+        // Update colors based on theme
+        if (isDark) {
+            document.body.style.backgroundColor = '#212529';
+            document.body.style.color = '#fff';
+        } else {
+            document.body.style.backgroundColor = '#f8f9fa';
+            document.body.style.color = '#212529';
+        }
+    });
+</script>
+
+<!-- Add these styles to your existing CSS -->
+
+
+
+<!-- Add before closing body tag -->
+<script>
+    // Bar Chart
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    new Chart(barCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Sales',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    '#0d6efd',
+                    '#198754',
+                    '#dc3545',
+                    '#6f42c1',
+                    '#fd7e14',
+                    '#20c997'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: '#495057'
+                    },
+                    ticks: {
+                        color: '#fff'
+                    }
+                },
+                x: {
+                    grid: {
+                        color: '#495057'
+                    },
+                    ticks: {
+                        color: '#fff'
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#fff'
+                    }
+                }
+            }
+        }
+    });
+
+    // Pie Chart
+    const pieCtx = document.getElementById('pieChart').getContext('2d');
+    new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Electronics', 'Clothing', 'Food', 'Books'],
+            datasets: [{
+                data: [30, 25, 25, 20],
+                backgroundColor: [
+                    '#0d6efd',
+                    '#198754',
+                    '#dc3545',
+                    '#6f42c1'
+                ]
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#fff'
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+    const sidebar = document.getElementById('sidebar');
+    const contentWrapper = document.querySelector('.content-wrapper');
+    
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+        if (window.innerWidth >= 992) {
+            sidebar.classList.toggle('hidden');
+            contentWrapper.classList.toggle('full');
+        } else {
+            sidebar.classList.toggle('show');
+        }
+    });
+</script>

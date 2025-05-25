@@ -1,0 +1,26 @@
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.footer {
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: auto;
+}
+.dropdown-menu {
+    background-color: #212529;
+}
+.dropdown-item {
+    color: #fff;
+}
+.dropdown-item:hover {
+    background-color: #343a40;
+    color: #fff;
+}
+.dropdown-item i {
+    margin-right: 8px;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 56px;
+}

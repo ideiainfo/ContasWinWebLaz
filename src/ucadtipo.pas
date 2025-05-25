@@ -55,12 +55,12 @@ procedure TFormCadTipo.ExportD2Bridge;
 begin
   inherited;
 
-  Title:= 'Contas Web Laz';
-  SubTitle:= 'Cadastro de Tipos de Contas a Pagar e Receber';
+  Title:= '';
+  SubTitle:= '';
 
-  TemplateClassForm:= TD2BridgeFormTemplate;
-  D2Bridge.FrameworkExportType.TemplateMasterHTMLFile:= '';
-  D2Bridge.FrameworkExportType.TemplatePageHTMLFile := '';
+TemplateClassForm:= TD2BridgeFormTemplate;
+D2Bridge.FrameworkExportType.TemplateMasterHTMLFile:= '';
+D2Bridge.FrameworkExportType.TemplatePageHTMLFile := '';
 
   //Export yours Controls
   with D2Bridge.Items.add do
@@ -83,7 +83,7 @@ begin
 
      with row.Items.Add do
       begin
-        with HTMLDIV(CSSClass.DivHtml.Align_Right).Items.Add do
+        with HTMLDIV(CSSClass.DivHtml.Align_Right+ ' mt-5 mb-4' ).Items.Add do
          begin
            with FormGroup do
              AddVCLObj(btnGravar,CSSClass.Button.save);

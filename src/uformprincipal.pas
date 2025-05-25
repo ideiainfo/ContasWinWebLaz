@@ -14,6 +14,7 @@ type
 
   TFormPrincipal = class(TD2BridgeForm)
     AppModule21: TMenuItem;
+    Button1: TButton;
     Label1: TLabel;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
@@ -39,7 +40,7 @@ function FormPrincipal: TFormPrincipal;
 implementation
 
 uses
-  uConTipo;
+  uConTipo, D2BridgeFormTemplate;
 
   {$R *.lfm}
 
@@ -57,15 +58,23 @@ begin
   Title:= 'Contas Web Laz';
   SubTitle:= 'Sistema de Controle de Contas a Pagar e Receber';
 
-  //TemplateClassForm:= TD2BridgeFormTemplate;
-  D2Bridge.FrameworkExportType.TemplateMasterHTMLFile:= '';
-  D2Bridge.FrameworkExportType.TemplatePageHTMLFile := '';
+  TemplateClassForm:= TD2BridgeFormTemplate;
+  D2Bridge.FrameworkExportType.TemplateMasterHTMLFile:= 'template.html';
+  D2Bridge.FrameworkExportType.TemplatePageHTMLFile := 'dashboard2.html';
 
   //Export yours Controls
   with D2Bridge.Items.add do
   begin
-   SideMenu(MainMenu1);
+  // SideMenu(MainMenu1);
+   //with MainMenu(MainMenu1) do
+   //begin
+   // Color:= $00E2445B;
+   // Title:= 'Contas a Pagar e Receber';
+   // TitleColor:=$009CAA4A ;
+   //end;
+
    LCLObj(Label1);
+   LCLObj(Button1);
 
   end;
 end;
