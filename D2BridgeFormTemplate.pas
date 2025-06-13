@@ -87,6 +87,9 @@ begin
    FormPrincipal.Show;
  end;
 
+  if SameText(CallBackName, 'MenuFechar') then
+    D2Bridge.PrismSession.Close(true);
+
 
 end;
 
@@ -117,7 +120,7 @@ begin
  //Process TAGs HTML {{TAGNAME}}
  if TagString = 'UserName' then
  begin
-  ReplaceTag := 'Name of User';
+  ReplaceTag := ContasWinWebLaz.FNomedoUsuario;
  end;
 
 end;

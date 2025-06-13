@@ -20,18 +20,21 @@
                 <i class="bi bi-exclamation-triangle-fill me-2"></i>
                 Invalid username or password!
             </div>
-            <form id="loginForm" onsubmit="return validateLogin(event)">
+            <form id="loginForm" >
                 <!-- Update the form input structure -->
                 <div class="mb-4 position-relative">
+
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        <input type="text" class="form-control" id="Edit_UserName" placeholder="Username" required>
 
                         <i class="bi bi-person input-icon"></i>
                     </div>
                 </div>
                 <div class="mb-4 position-relative">
+
+
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <input type="password" class="form-control" id="Edit_Password" placeholder="Password" required>
 
                         <i class="bi bi-key input-icon"></i>
                     </div>
@@ -40,9 +43,12 @@
                     <input type="checkbox" class="form-check-input" id="remember">
                     <label class="form-check-label" for="remember">Remember me</label>
                 </div>
-                <button type="submit" class="btn btn-login btn-primary w-100 mb-3">
+     
+
+                <button id="Button_Login"  type="button" class="btn btn-login btn-primary w-100 mb-3">
                     <i class="bi bi-box-arrow-in-right me-2"></i>Sign In
                 </button>
+
                 <div class="text-center">
                     <a href="#" class="text-light text-decoration-none">Forgot password?</a>
                 </div>
@@ -50,24 +56,6 @@
         </div>
     </div>
 
-    <script>
-        function validateLogin(event) {
-            event.preventDefault();
-            
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const errorAlert = document.getElementById('loginError');
-            
-            if (username === 'admin' && password === 'admin') {
-                window.location.href = 'dashboard.html';
-            } else {
-                errorAlert.style.display = 'block';
-                setTimeout(() => {
-                    errorAlert.style.display = 'none';
-                }, 3000);
-            }
-            return false;
-        }
-    </script>
+
 </body>
 </html>

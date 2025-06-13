@@ -81,7 +81,7 @@ begin
   Title:= 'Contas Web Laz';
   SubTitle:= 'Cadastro de Tipos de Contas a Pagar e Receber';
 
-//  TemplateClassForm:= TD2BridgeFormTemplate;
+  TemplateClassForm:= TD2BridgeFormTemplate;
   D2Bridge.FrameworkExportType.TemplateMasterHTMLFile:= 'template.html';
   D2Bridge.FrameworkExportType.TemplatePageHTMLFile := 'itemtemplate.html';
 

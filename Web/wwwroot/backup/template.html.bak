@@ -41,7 +41,7 @@
                 </a>
             </div>
             <div class="mt-auto pt-3">
-                <a onclick="{{CallBack=MenuFechar}}" class="btn btn-danger w-100 mt-2">Logout</a>
+                <a href="login.html" class="btn btn-danger w-100 mt-2">Logout</a>
             </div>
         </div>
 
@@ -138,40 +138,15 @@
 
 <!-- Add before closing body tag -->
 <script>
-
-
     // Bar Chart
-
-    
-   let graficobarra;
-
-    document.addEventListener('DOMContentLoaded', function() {
-
-        graficobarra = geragrafico([10, 20, 30, 40, 50, 60]);
-
-    });
-
-
-
-  function renovagrafico(dadosgrafico)
-  {
-    graficobarra.destroy();
-    graficobarra = geragrafico(dadosgrafico);
-  } 
-
-
-  function geragrafico(dadosgrafico)
-  {
-
-    return new Chart(document.getElementById('barChart').getContext('2d'), {
-    // barCtx = document.getElementById('barChart').getContext('2d');
-    // grafico = new Chart(barCtx, {
+    const barCtx = document.getElementById('barChart').getContext('2d');
+    new Chart(barCtx, {
         type: 'bar',
         data: {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
             datasets: [{
                 label: 'Sales',
-                data: dadosgrafico,
+                data: [12, 19, 3, 5, 2, 3],
                 backgroundColor: [
                     '#0d6efd',
                     '#198754',
@@ -213,8 +188,6 @@
         }
     });
 
-
-}
     // Pie Chart
     const pieCtx = document.getElementById('pieChart').getContext('2d');
     new Chart(pieCtx, {

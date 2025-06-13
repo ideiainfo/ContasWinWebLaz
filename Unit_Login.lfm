@@ -13,7 +13,6 @@ object Form_Login: TForm_Login
   Font.Height = -15
   Font.Name = 'Segoe UI'
   Position = poScreenCenter
-  LCLVersion = '4.0.0.4'
   object Image_BackGround: TImage
     Left = 0
     Height = 450

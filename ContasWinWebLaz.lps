@@ -12,7 +12,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="31"/>
         <CursorPos X="3" Y="28"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="140"/>
       </Unit>
       <Unit>
         <Filename Value="unit1.pas"/>
@@ -24,7 +24,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="85"/>
         <CursorPos Y="85"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="140"/>
       </Unit>
       <Unit>
         <Filename Value="..\d2bridgeframework\D2Bridge Framework\D2Bridge.ServerControllerBase.pas"/>
@@ -32,7 +32,7 @@
         <ComponentName Value="D2BridgeServerControllerBase"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="84"/>
       </Unit>
       <Unit>
         <Filename Value="..\d2bridgeframework\D2Bridge Framework\Prism\Prism.SessionBase.pas"/>
@@ -40,7 +40,7 @@
         <ComponentName Value="PrismSessionBase"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="84"/>
       </Unit>
       <Unit>
         <Filename Value="ContasWinWebLaz_Session.pas"/>
@@ -49,9 +49,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="22"/>
-        <CursorPos X="6" Y="34"/>
-        <UsageCount Value="77"/>
+        <TopLine Value="7"/>
+        <CursorPos X="4" Y="14"/>
+        <UsageCount Value="140"/>
       </Unit>
       <Unit>
         <Filename Value="ContasWinWebLazWebApp.pas"/>
@@ -59,7 +59,7 @@
         <ComponentName Value="ContasWinWebLazWebAppGlobal"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="140"/>
       </Unit>
       <Unit>
         <Filename Value="Unit_D2Bridge_Server_Console.pas"/>
@@ -67,16 +67,15 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="107"/>
         <CursorPos X="68" Y="117"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="140"/>
       </Unit>
       <Unit>
         <Filename Value="D2BridgeFormTemplate.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="99"/>
-        <CursorPos X="22" Y="57"/>
-        <UsageCount Value="77"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="108"/>
+        <CursorPos Y="73"/>
+        <UsageCount Value="140"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -85,12 +84,10 @@
         <ComponentName Value="Form_Login"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="25"/>
-        <CursorPos X="57" Y="105"/>
-        <UsageCount Value="77"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="3" Y="63"/>
+        <UsageCount Value="140"/>
       </Unit>
       <Unit>
         <Filename Value="src\ucadtipo.pas"/>
@@ -98,10 +95,10 @@
         <ComponentName Value="FormCadTipo"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="88"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="87"/>
         <CursorPos Y="61"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="138"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -112,9 +109,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="74"/>
-        <CursorPos X="34" Y="87"/>
-        <UsageCount Value="75"/>
+        <TopLine Value="79"/>
+        <CursorPos X="32" Y="84"/>
+        <UsageCount Value="138"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -124,10 +121,12 @@
         <ComponentName Value="DM"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="15"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="9"/>
         <CursorPos X="34" Y="25"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="138"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="src\uformprincipal.pas"/>
@@ -136,9 +135,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uFormPrincipal"/>
-        <TopLine Value="53"/>
-        <CursorPos X="60" Y="63"/>
-        <UsageCount Value="75"/>
+        <TopLine Value="54"/>
+        <CursorPos Y="66"/>
+        <UsageCount Value="138"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -147,36 +146,21 @@
         <ComponentName Value="D2BridgeServerControllerBase"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <UsageCount Value="70"/>
+        <UsageCount Value="64"/>
       </Unit>
       <Unit>
         <Filename Value="C:\d2bridgeframework\D2Bridge Framework\Prism\Prism.SessionBase.pas"/>
         <ComponentName Value="PrismSessionBase"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <UsageCount Value="70"/>
+        <UsageCount Value="64"/>
       </Unit>
       <Unit>
         <Filename Value="C:\d2bridgeframework\D2Bridge Framework\Prism\Prism.Card.Model.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="51"/>
         <CursorPos X="49" Y="61"/>
-        <UsageCount Value="19"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\d2bridgeframework\D2Bridge Framework\D2Bridge.Item.VCLObj.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="455"/>
-        <CursorPos X="20" Y="457"/>
-        <UsageCount Value="5"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\configlazarus\onlinepackagemanager\packages\zeosdbo\src\component\ZAbstractConnection.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="634"/>
-        <CursorPos Y="644"/>
-        <UsageCount Value="5"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="13"/>
       </Unit>
       <Unit>
         <Filename Value="C:\d2bridgeframework\D2Bridge Framework\Prism\Prism.Server.HTML.Headers.pas"/>
@@ -186,149 +170,199 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="366"/>
         <CursorPos Y="376"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\d2bridgeframework\D2Bridge Framework\Prism\Prism.Session.Thread.Proc.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="219"/>
         <CursorPos Y="223"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus4\fpc\3.2.2\source\packages\rtl-generics\src\generics.collections.pas"/>
         <UnitName Value="Generics.Collections"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="1402"/>
-        <CursorPos Y="1467"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="1432"/>
+        <CursorPos Y="1442"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\d2bridgeframework\D2Bridge Framework\Prism\Prism.Forms.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1128"/>
         <CursorPos Y="1137"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="17"/>
       </Unit>
       <Unit>
         <Filename Value="C:\d2bridgeframework\D2Bridge Framework\Prism\Prism.Grid.Columns.Buttons.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="188"/>
-        <CursorPos X="44" Y="208"/>
-        <UsageCount Value="27"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="194"/>
+        <CursorPos Y="198"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\d2bridgeframework\D2Bridge Framework\Prism\Prism.Interfaces.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="155"/>
         <CursorPos X="13" Y="165"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="3"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\d2bridgeframework\D2Bridge Framework\D2Bridge.Forms.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2012"/>
+        <CursorPos Y="2027"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Web\wwwroot\template.html"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <CursorPos X="53" Y="21"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="HTML"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\d2bridgeframework\D2Bridge Framework\Prism\Prism.Form.Timer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="113"/>
+        <CursorPos X="43" Y="116"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\WebIndo2\src\uprincipal.pas"/>
+        <ComponentName Value="Formprincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="79"/>
+        <CursorPos X="28" Y="87"/>
+        <UsageCount Value="4"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="25">
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="216" Column="13" TopLine="200"/>
+        <Caret Line="84" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="225" Column="10" TopLine="209"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="227" Column="22" TopLine="211"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="257" Column="9" TopLine="241"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="259" Column="21" TopLine="243"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="216" Column="13" TopLine="207"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="225" Column="10" TopLine="209"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="227" Column="22" TopLine="211"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="257" Column="9" TopLine="241"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="259" Column="21" TopLine="243"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="165" Column="31" TopLine="162"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="86" Column="57" TopLine="69"/>
-      </Position>
-      <Position>
-        <Filename Value="src\uformprincipal.pas"/>
-        <Caret Line="61" Column="66" TopLine="51"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucontipo.pas"/>
-        <Caret Line="108" Column="22" TopLine="94"/>
-      </Position>
-      <Position>
-        <Filename Value="src\ucadtipo.pas"/>
-        <Caret Line="97" Column="45" TopLine="82"/>
-      </Position>
-      <Position>
-        <Filename Value="src\uformprincipal.pas"/>
-        <Caret Line="76" Column="20" TopLine="59"/>
+        <Filename Value="src\udm.pas"/>
+        <Caret Line="25" Column="34" TopLine="9"/>
       </Position>
       <Position>
         <Filename Value="D2BridgeFormTemplate.pas"/>
-        <Caret Line="78" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="D2BridgeFormTemplate.pas"/>
-        <Caret Line="76" Column="37" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="D2BridgeFormTemplate.pas"/>
-        <Caret Line="25" Column="22" TopLine="21"/>
-      </Position>
-      <Position>
-        <Filename Value="D2BridgeFormTemplate.pas"/>
-        <Caret Line="57" Column="3" TopLine="37"/>
-      </Position>
-      <Position>
-        <Filename Value="D2BridgeFormTemplate.pas"/>
-        <Caret Line="53" Column="69" TopLine="44"/>
-      </Position>
-      <Position>
-        <Filename Value="D2BridgeFormTemplate.pas"/>
-        <Caret Line="52" Column="22" TopLine="42"/>
-      </Position>
-      <Position>
-        <Filename Value="D2BridgeFormTemplate.pas"/>
-        <Caret Line="49" Column="2" TopLine="42"/>
-      </Position>
-      <Position>
-        <Filename Value="D2BridgeFormTemplate.pas"/>
-        <Caret Line="24" Column="24" TopLine="11"/>
-      </Position>
-      <Position>
-        <Filename Value="D2BridgeFormTemplate.pas"/>
-        <Caret Line="50" Column="30" TopLine="44"/>
+        <Caret Line="91" Column="30" TopLine="72"/>
       </Position>
       <Position>
         <Filename Value="src\uformprincipal.pas"/>
         <Caret Line="63" Column="60" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="62" Column="60" TopLine="52"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="63" Column="60" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="64" Column="60" TopLine="54"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="65" Column="60" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="66" Column="60" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="88" Column="19" TopLine="71"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="179" Column="51" TopLine="162"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="85" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="176" Column="52" TopLine="167"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="174" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="185" Column="2" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="186" Column="11" TopLine="172"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="187" Column="3" TopLine="174"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="190" Column="10" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="186" Column="10" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="180" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="190" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="186" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="187" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="188" Column="8" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="186" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="187" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="180" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="186" Column="21" TopLine="175"/>
+      </Position>
+      <Position>
+        <Filename Value="src\uformprincipal.pas"/>
+        <Caret Line="86" Column="4" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="src\ucontipo.pas"/>
+        <Caret Line="84" Column="32" TopLine="79"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -336,4 +370,11 @@
       <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
+  <Debugging>
+    <Watches>
+      <Item>
+        <Expression Value="PrismSession"/>
+      </Item>
+    </Watches>
+  </Debugging>
 </CONFIG>

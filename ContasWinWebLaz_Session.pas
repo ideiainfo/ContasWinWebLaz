@@ -11,6 +11,11 @@ type
   private
 
   public
+
+   FNomedoUsuario:string;
+   FNivel:integer;
+   FIdUsuario:integer;
+
    constructor Create(APrismSession: TPrismSession); override;  //OnNewSession
    destructor Destroy; override; //OnCloseSession
   end;

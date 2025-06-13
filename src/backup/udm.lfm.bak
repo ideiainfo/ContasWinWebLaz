@@ -10,6 +10,7 @@ object DM: TDM
     Properties.Strings = (
       'RawStringEncoding=DB_CP'
     )
+    Connected = True
     DisableSavepoints = False
     HostName = '127.0.0.1'
     Port = 3306
@@ -17,7 +18,7 @@ object DM: TDM
     User = 'root'
     Password = 'produtiv'
     Protocol = 'mysql'
-    LibraryLocation = 'c:\projetosd2\dll\libmysql.dll'
+    LibraryLocation = 'C:\projetosd2\dll\libmysql.dll'
     Left = 460
     Top = 150
   end

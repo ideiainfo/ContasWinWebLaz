@@ -1,0 +1,243 @@
+object FormConTipo: TFormConTipo
+  Left = 330
+  Height = 491
+  Top = 250
+  Width = 736
+  Caption = 'Tipos de Contas a Pagar/Receber'
+  ClientHeight = 491
+  ClientWidth = 736
+  DesignTimePPI = 120
+  Position = poMainFormCenter
+  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
+  object lblLocalizar: TLabel
+    Left = 24
+    Height = 20
+    Top = 24
+    Width = 59
+    Caption = 'Localizar'
+  end
+  object EditLocalizar: TEdit
+    Left = 88
+    Height = 28
+    Top = 21
+    Width = 250
+    TabOrder = 0
+  end
+  object BtnLocalizar: TButton
+    Left = 344
+    Height = 25
+    Top = 20
+    Width = 75
+    Caption = 'Buscar'
+    TabOrder = 1
+    OnClick = BtnLocalizarClick
+  end
+  object BtnNovo: TButton
+    Left = 536
+    Height = 25
+    Top = 20
+    Width = 75
+    Caption = 'Novo'
+    TabOrder = 2
+    OnClick = BtnNovoClick
+  end
+  object BtnEditar: TButton
+    Left = 440
+    Height = 25
+    Top = 19
+    Width = 75
+    Caption = 'Editar'
+    TabOrder = 3
+    OnClick = BtnEditarClick
+  end
+  object BtnExcluir: TButton
+    Left = 637
+    Height = 25
+    Top = 20
+    Width = 75
+    Caption = 'Excluir'
+    TabOrder = 4
+    OnClick = BtnExcluirClick
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 368
+    Top = 65
+    Width = 720
+    Color = clWindow
+    Columns = <    
+      item
+        Title.Caption = 'Código'
+        Width = 30
+        FieldName = 'codigo'
+      end    
+      item
+        Title.Caption = 'Descrição'
+        Width = 200
+        FieldName = 'descricao'
+      end    
+      item
+        Title.Caption = 'Tipo'
+        Width = 100
+        FieldName = 'tipo'
+      end    
+      item
+        PickList.Strings = (
+          'Despesa de Imóvel'
+          'Material de Expediente'
+          'Vendas'
+          'Serviços '
+          'Despesa com pessoal'
+          'Impostos'
+        )
+        Title.Caption = 'Grupo'
+        Width = 150
+        FieldName = 'descricao1'
+      end>
+    DataSource = dsTipo
+    ReadOnly = True
+    TabOrder = 5
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    OnDblClick = DBGrid1DblClick
+  end
+  object btnFechar: TButton
+    Left = 616
+    Height = 31
+    Top = 448
+    Width = 94
+    Caption = 'Fechar'
+    TabOrder = 6
+    OnClick = btnFecharClick
+  end
+  object dsTipo: TDataSource
+    DataSet = qrTipo
+    Left = 524
+    Top = 188
+  end
+  object dsGrupo: TDataSource
+    DataSet = qrGrupo
+    Left = 516
+    Top = 276
+  end
+  object qrTipo: TZQuery
+    Connection = DM.ZConnection1
+    SQL.Strings = (
+      'select * from conta'
+    )
+    Params = <>
+    Left = 602
+    Top = 194
+    object qrTipoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qrTipocodigo: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'codigo'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrTipodescricao: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'descricao'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 100
+    end
+    object qrTipotipo: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'tipo'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+    object qrTipogrupo: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'grupo'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object desgrupo: TStringField
+      DisplayLabel = 'desgrupo'
+      FieldKind = fkLookup
+      FieldName = 'descricao1'
+      Index = 5
+      KeyFields = 'grupo'
+      LookupCache = False
+      LookupDataSet = qrGrupo
+      LookupKeyFields = 'codigo'
+      LookupResultField = 'descricao'
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+  end
+  object qrGrupo: TZQuery
+    Connection = DM.ZConnection1
+    SQL.Strings = (
+      'select * from grupoconta'
+    )
+    Params = <>
+    Left = 594
+    Top = 282
+    object qrGrupoid: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qrGrupocodigo: TZIntegerField
+      FieldKind = fkData
+      FieldName = 'codigo'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qrGrupodescricao: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'descricao'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object qrGrupotipo: TZRawStringField
+      FieldKind = fkData
+      FieldName = 'tipo'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+  end
+end

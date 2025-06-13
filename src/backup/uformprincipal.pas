@@ -16,10 +16,15 @@ type
     AppModule21: TMenuItem;
     Button1: TButton;
     Label1: TLabel;
+    lblUsers: TLabel;
+    lblProducts: TLabel;
+    lblOrders: TLabel;
+    lblRevenue: TLabel;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
     MenuItem2: TMenuItem;
     MenuItem3: TMenuItem;
+    procedure Button1Click(Sender: TObject);
     procedure MenuItem1Click(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
     procedure MenuItem3Click(Sender: TObject);
@@ -58,9 +63,9 @@ begin
   Title:= 'Contas Web Laz';
   SubTitle:= 'Sistema de Controle de Contas a Pagar e Receber';
 
-  TemplateClassForm:= TD2BridgeFormTemplate;
+//  TemplateClassForm:= TD2BridgeFormTemplate;
   D2Bridge.FrameworkExportType.TemplateMasterHTMLFile:= 'template.html';
-  D2Bridge.FrameworkExportType.TemplatePageHTMLFile := 'itemtemplate.html';
+  D2Bridge.FrameworkExportType.TemplatePageHTMLFile := 'dashboard2.html';
 
   //Export yours Controls
   with D2Bridge.Items.add do
@@ -73,8 +78,14 @@ begin
    // TitleColor:=$009CAA4A ;
    //end;
 
-   LCLObj(Label1);
-   LCLObj(Button1);
+   //LCLObj(lblUsers);
+   //LCLObj(lblProducts);
+   //LCLObj(lblOrders);
+   //LCLObj(lblRevenue);
+   //
+   //LCLObj(Button1);
+
+   ExportD2BridgeAllControls;
 
   end;
 end;
@@ -153,10 +164,27 @@ begin
 end;
 
 procedure TFormPrincipal.MenuItem1Click(Sender: TObject);
+
 begin
   if FormConTipo = nil then
     TFormConTipo.CreateInstance;
   FormConTipo.show;
+
+
+
+end;
+
+procedure TFormPrincipal.Button1Click(Sender: TObject);
+var dadosgrafico:string;
+begin
+  lblUsers.Caption:=inttostr(strtoint(lblUsers.caption)+10);
+  lblProducts.Caption:=inttostr(strtoint(lblProducts.caption)+10);
+  lblOrders.Caption:=inttostr(strtoint(lblOrders.caption)+10);
+  lblRevenue.Caption:=inttostr(strtoint(lblRevenue.caption)+10);
+
+  dadosgrafico :=  '[12, 19, 20, 5, 2, 3]';
+  Session.ExecJS('renovagrafico('+dadosgrafico+');');
+
 
 end;
 

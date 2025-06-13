@@ -57,6 +57,10 @@ begin
  //***EXAMPLE***
  if (Edit_UserName.Text = 'admin') and (Edit_Password.Text = 'admin') then
  begin
+  ContasWinWebLaz.FIdUsuario:=1;
+  ContasWinWebLaz.FNomedoUsuario:='Fernando';
+  ContasWinWebLaz.FNivel:=1;
+
   if FormPrincipal = nil then
    TFormPrincipal.CreateInstance;
   FormPrincipal.Show;
@@ -103,7 +107,7 @@ begin
 
  //TemplateClassForm:= TD2BridgeFormTemplate;
  D2Bridge.FrameworkExportType.TemplateMasterHTMLFile:= '';
- D2Bridge.FrameworkExportType.TemplatePageHTMLFile := '';
+ D2Bridge.FrameworkExportType.TemplatePageHTMLFile := 'login.html';
 
  //Export yours Controls
  with D2Bridge.Items.add do
@@ -123,7 +127,7 @@ begin
      Col.Add.VCLObj(Label_Login);
 
     with Row.Items.Add do
-     Col.Add.VCLObj(Edit_UserName, 'ValidationLogin', true);
+     Col.Add.VCLObj(Edit_UserName,  'ValidationLogin', true);
 
     with Row.Items.Add do
      with Col.Items.add do //Example Edit + Button same row and col
